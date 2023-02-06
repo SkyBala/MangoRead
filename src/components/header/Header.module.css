@@ -1,0 +1,43 @@
+header{
+    padding: 14px 0 13px;
+    background: #F3F3F3;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
+}
+.headerInner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.headerLogo{
+    display: flex;
+    gap: 5px;
+    width: 275px;
+}
+.logoText{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logoText span {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    margin-bottom: 4px;
+}
+
+.logoText p {
+    font-size: 16px;
+    line-height: 20px;
+    color: #878787;
+    letter-spacing: 1.10px;
+    white-space: nowrap;
+}
+
+
+.buttons{
+    width: 363px;
+    display: flex;
+    justify-content: space-between;
+}
