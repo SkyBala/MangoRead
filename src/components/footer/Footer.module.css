@@ -38,10 +38,10 @@ footer{
 }
 
 
-/* snLinks */
+/* FooterLinks */
 
 
-.snLinks{
+.FooterLinks{
     width: 110px;
     height: 136px; 
     display: flex;
@@ -49,10 +49,19 @@ footer{
     justify-content: space-between;
 }
 
-.snLink{
+.FooterLinks{
     display: flex;
+    height: 110px;
+   
+
 }
-.snLinkText{
+.FooterLinks2{
+    display: flex;
+    flex-direction: row;
+    color: #000000;
+}
+
+.FooterLinksText{
     margin-left: 13px;
     font-family: 'Roboto';
     font-style: normal;

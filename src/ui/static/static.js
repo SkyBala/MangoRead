@@ -25,9 +25,16 @@ export const staticFooter = {
   logohead,
   siteName: 'MangoRead',
   slogan: 'Читай мангу с нами',
-  snLinks: [
+  FooterLinks: [
     {
-      icon: <img src={FacebookIcon} alt="FacebookIcon" />,
+      icon:<FacebookIcon
+      sx={{
+        width: 24,
+        height: 24,
+        color: 'secondary.forIcon',
+        background: '#FFFFFF'
+      }}
+    />,
       title: 'Link One',
       url: 'https://t.me/karafacee1'
     },

@@ -2,6 +2,7 @@ import { Container } from '@mui/material'
 import { staticFooter } from '../../ui/static/static'
 import classes from './Footer.module.css'
 import { FooterMap } from '../../ui/footerComp/FooterMap'
+import FooterLinks from './footerLinks/FooterLiks'
 
 function Footer() {
   return (
@@ -22,7 +23,7 @@ function Footer() {
               </div>
             </div>
           </a>
-          
+          <FooterLinks/>
           <FooterMap />
         </div>
       </Container>
