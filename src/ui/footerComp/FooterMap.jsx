@@ -4,6 +4,7 @@ export function FooterMap() {
   return (
     <div>
       <iframe
+      title='.'
         src={links.map}
         style={{
           width:'400px',

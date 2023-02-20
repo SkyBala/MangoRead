@@ -3,9 +3,9 @@ import { SignInButtonStyle } from "./muiHeadeStyle"
 import { staticHeader } from "../static/static"
 
 
-function SignInButton() {
+function SignInButton(props) {
   return (
-    <Button sx={SignInButtonStyle}>{staticHeader.buttons.signIn}</Button>
+    <Button {...props} sx={SignInButtonStyle}>{staticHeader.buttons.signIn}</Button>
   )
 }
 

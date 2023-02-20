@@ -3,13 +3,14 @@ import React from 'react'
 //style
 import classes from "./MainPage.module.css"
 import { Box } from '@mui/system'
-//
+
 //componemts and templates
 import Filter from '../../templates/filter/Filter'
-import Header from '../../components/header/Header'
-import Footer from '../../components/footer/Footer'
+import Header from '../../templates/header/Header'
+import Footer from '../../templates/footer/Footer'
 import MangaCard from '../../templates/cardTemplate/MangaCard'
-//
+import MainPagination from '../../ui/filterComp/pagination'
+
 
 function MainPage() {
   return (
@@ -26,6 +27,10 @@ function MainPage() {
         <Filter/>
         
         <MangaCard/>
+        
+      </Box>
+      <Box>
+              <MainPagination/>
       </Box>
     </div>
     <Footer/>

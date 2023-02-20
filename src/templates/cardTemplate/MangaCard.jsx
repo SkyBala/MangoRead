@@ -1,14 +1,30 @@
-import { Grid } from '@mui/material';
+//hooks
+
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+
+
+//dowload componets
+// import { NavLink } from 'react-router-dom';
 import { Box } from '@mui/system';
-import React from 'react'
+
+
+//components
 import Card from '../../components/card/Card'
 
-function MangaCard() {
-  const since = []
-  for (let i = 0; i < 12; i++) {
-    since.push(i);
-    
-  }
+
+//api 
+import { getMangas } from '../../store/MangaSlice';
+function MangaCard(props) {
+  const dispatch = useDispatch()
+  const manga = useSelector(state => state.mangaReducer.mangas)
+
+
+
+  useEffect(() => {
+    dispatch(getMangas())
+  }, [dispatch]);
+
   return (
   
     <Box
@@ -19,11 +35,16 @@ function MangaCard() {
         height:"700px",
         justifyContent:"space-between",
         padding:"0px",
+        marginLeft:"20px",
       }}>   
-  {since.map(() => {
-     return<Card />
-    })
-    }
+   {manga ? manga.map((item) =>{
+                      {/* <NavLink to={`/${item.id}`} info={{image : item.image}}>
+                       */}
+                        return(  <Card key={item} post={{image : item?.image , year: item?.issue_year, name : item?.ru_name}} />)
+                        {/* </NavLink> */}
+   })
+                        :
+          <>Uno Momento</>}
     </Box>
   
 

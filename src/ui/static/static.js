@@ -8,6 +8,8 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter'
 import InstagramIcon from '@mui/icons-material/Instagram'
 
+//modal
+import XIcon from '@mui/icons-material/Close';
 
 export const staticHeader = {
   logohead,
@@ -83,3 +85,34 @@ export const staticFooter = {
     }
   ]
 }
+export const FilterComp = {
+  clear:{
+    title:'Сбросить',
+  },
+  apply:{
+    title:'Применить',
+  }
+}
+export const staticModal ={
+ XIcon,
+  singIn:'Вход',
+  singUp:'Регистрация',
+  addImg:'добавить фото',
+  SignInForm:{
+      checkBox:'Запомнить меня',
+      inp1:'username',
+      inp2:'password',
+      btn:'Войти'
+  },
+  SignUpform:{
+      username:'username',
+      nickname:'nickname',
+      image:'image_file',
+      password:'password',
+      errorLength:'Ensure this field has at least 10 characters.',
+      erroPassord:'Ensure this field has at least 8 characters.',
+      errorField:'This field may not be blank.',
+      errorImg:'Submit photo'
+  }
+}
+

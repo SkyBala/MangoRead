@@ -2,6 +2,7 @@
 .Main{
     height: 847px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }

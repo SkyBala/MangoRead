@@ -23,6 +23,7 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-start;
 }
 .logoText span{
     font-weight: 500;
@@ -35,6 +36,7 @@ footer{
     line-height: 24px;
     color: #000000;
     text-align: justify;
+    margin: 0;
 }
 
 
