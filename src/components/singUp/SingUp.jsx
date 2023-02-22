@@ -29,6 +29,10 @@ function SingUp() {
         },
       })
       .then((response) => {
+        console.log(response);
+        if(response.data==='User not found, try again body!'){
+          throw(response.data)
+        }
         localStorage.setItem("tokenA", JSON.stringify(response.data.access));
         localStorage.setItem("tokenR", JSON.stringify(response.data.refresh));
         swal({
@@ -39,7 +43,12 @@ function SingUp() {
         dispatch(getAccount(logUser));
       })
       .catch(function (error) {
-        alert(error);
+        // alert(error);
+        swal({
+          title: "error:",
+          text: "Sorry Try again!",
+          icon: "error",
+        })
       });
   };
   
@@ -114,6 +123,7 @@ function SingUp() {
             size="large"
             classes={{ root: "custom-checkbox-root" }}
             sx={{
+              paddingLeft:"0px",
               borderColor: "#AD02E0",
               padding: "0 35px 0 0",
               color: "#AD02E0",

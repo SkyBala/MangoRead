@@ -157,12 +157,12 @@ function Modals() {
                 />
               </Tabs>
             </Box>
-            <TabPanel value={authModalTabsIndex} index={0} sx={{}}>
-              <SingUp />
+            <TabPanel value={authModalTabsIndex} index={0}>
+              <SingUp/>
             </TabPanel>
 
             <TabPanel value={authModalTabsIndex} index={1}>
-              <SingIn />
+              <SingIn/>
             </TabPanel>
           </Box>
         </div>

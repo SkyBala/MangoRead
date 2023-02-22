@@ -26,11 +26,13 @@ function SingIn() {
     })
       .then((response) => {
         console.log(response);
+
         swal({
           title: "Success:",
           text: "You are registered successfully!",
           icon: "success",
         });
+      
       })
       .catch(function (error) {
         console.log(error);

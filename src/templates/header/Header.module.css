@@ -38,8 +38,3 @@ header{
 }
 
 
-.buttons{
-    width: 363px;
-    display: flex;
-    justify-content: space-between;
-}

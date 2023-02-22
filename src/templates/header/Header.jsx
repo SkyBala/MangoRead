@@ -1,30 +1,25 @@
 import { Container } from '@mui/material';
 import { staticHeader } from '../../ui/static/static';
 import classes from './Header.module.css';
-import SingInButton from '../../ui/headerComp/SingInButton';
-import SignUpButton from '../../ui/headerComp/SingUpButton';
-import InputHeader from '../../ui/headerComp/input';
-import {useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { Link } from "react-router-dom";
-import {
-  infoModalOpen,
-  AuthModalTabs,
-} from "../../store/Modalslice";
-import Modals from '../modal/Modal';
 
+import InputHeader from '../../ui/headerComp/input';
+import {useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
+import AuthSucces from '../../components/authSucces/AuthSucces';
+import AuthMode from '../../components/authMode/AuthMode';
 function Header() {
 
   const dispatch = useDispatch();
 
-  const loginTabOpen = () => {
-    dispatch(infoModalOpen());
-    dispatch(AuthModalTabs(0));
-  };
-  const registerTabOpen = () => {
-    dispatch(infoModalOpen());
-    dispatch(AuthModalTabs(1));
-  };
+
+  
+  const { account } = useSelector((state) => state.authReducer);
+  const [isLogined, setIsLogined] = useState(false);
+  useEffect(() => {
+    setIsLogined(account);
+  }, [dispatch, account]);
+
   useEffect(() =>{
 
    }, [dispatch]);
@@ -41,13 +36,11 @@ function Header() {
             </div>
           </div>
           <InputHeader/>
-          <div className={classes.buttons}>
+
+    <div className={classes.authStyles}>
           
-      <SingInButton onClick={loginTabOpen}/>
-              <Modals/>
-      
-        
-              <SignUpButton onClick={registerTabOpen} />
+          
+          {isLogined === true ? <AuthSucces/> : <AuthMode/>}
           </div>
         </div>
       </Container>

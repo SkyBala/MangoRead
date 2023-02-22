@@ -10,6 +10,8 @@ export const getMangas = createAsyncThunk(
     }
 )
 
+
+
 const MangaSlice = createSlice({
     name:"MangaSlice",
     initialState:{

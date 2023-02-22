@@ -14,7 +14,9 @@ function Janres() {
       overflowY:"scroll",
     }}>
         {chek.map (() => {
-            return(<ChekBox/>)
+            return(      
+            <ChekBox/>
+            )
         })}
     </Box>
   )
